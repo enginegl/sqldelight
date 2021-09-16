@@ -13,7 +13,7 @@ jobs:
         # always use the oldest ubuntu LTS release still available with the github actions
         # this is needed so the build host does not have any libraries installed which are too recent for a successful linking on linux
         # for a log of why this is needed, see: https://github.com/touchlab/SQLiter/pull/38#issuecomment-867171789
-        os: [ macOS-latest, windows-latest, ubuntu-18.04 ]
+        os: [ windows-latest ]
         job: [ instrumentation, test, gradle-plugin-tests, gradle-plugin-integrations ]
         exclude:
           - os: windows-latest
