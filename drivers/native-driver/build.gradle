@@ -84,6 +84,9 @@ kotlin {
     }
   }
 
+  // Test task will be skipped without any change in the module:
+  // > Task :drivers:driver-test:mingwTest SKIPPED
+
   //linking fails for the linux test build if not built on a linux host
   //ensure the tests and linking for them is only done on linux hosts
   if(!HostManager.hostIsLinux) {
