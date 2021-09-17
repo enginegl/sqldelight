@@ -84,8 +84,6 @@ kotlin {
     }
   }
 
-  //linking fails for the linux test build if not built on a linux host
-  //ensure the tests and linking for them is only done on linux hosts
   if(!HostManager.hostIsLinux) {
     tasks.findByName("linuxX64Test")?.enabled = false
     tasks.findByName("linkDebugTestLinuxX64")?.enabled = false
